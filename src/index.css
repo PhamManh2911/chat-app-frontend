@@ -1,0 +1,113 @@
+/* =========================
+   1. Box sizing reset
+   ========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =========================
+   2. Remove default margins
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   3. HTML & body defaults
+   ========================= */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================
+   4. Media defaults
+   ========================= */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================
+   5. Form elements reset
+   ========================= */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   6. Links
+   ========================= */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   7. Lists
+   ========================= */
+ul,
+ol {
+  list-style: none;
+}
+
+/* =========================
+   8. Headings
+   ========================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+}
+
+/* =========================
+   9. Tables
+   ========================= */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* =========================
+   10. Accessibility
+   ========================= */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
