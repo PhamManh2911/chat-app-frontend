@@ -13,7 +13,7 @@ export async function loginWithGoogle() {
 
 export async function logout() {
   const response = await axiosInstance.post(
-    `${configs.authConfig.authApiURL}/auth/logout`
+    `${configs.authConfig.authApiURL}/auth/logout`,
   );
 
   return response.data;
@@ -21,7 +21,7 @@ export async function logout() {
 
 export async function getMe() {
   const response = await axiosInstance.get<User>(
-    `${configs.authConfig.authApiURL}/auth/me`
+    `${configs.authConfig.authApiURL}/auth/me`,
   );
 
   return response.data;
@@ -29,7 +29,18 @@ export async function getMe() {
 
 export async function refreshToken() {
   const response = await axiosInstance.post(
-    `${configs.authConfig.authApiURL}/auth/refresh`
+    `${configs.authConfig.authApiURL}/auth/refresh`,
+  );
+
+  return response.data;
+}
+
+export async function getListUsers(searchTerm: string) {
+  const response = await axiosInstance.get<{
+    data: Array<User>;
+    hasMore: boolean;
+  }>(
+    `${configs.authConfig.authApiURL}/organizations/users${searchTerm ? `?search=${encodeURIComponent(searchTerm)}` : ""}`,
   );
 
   return response.data;
